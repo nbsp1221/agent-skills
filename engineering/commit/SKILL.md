@@ -38,6 +38,7 @@ Use the reference docs for detailed rules.
    - If checks fail, try to resolve them. If you cannot, pause and ask using the user input guidance below.
 
 6. Compose the message
+   - If a convention is identified, you MUST open the matching reference and follow its rules before composing the message.
    - Conventional Commits: follow `references/conventional-commits.md`.
    - Gitmoji: follow `references/gitmoji.md`.
    - Custom template: follow the exact pattern from history or the template file.
@@ -67,6 +68,17 @@ Honor the user's explicit request even if it does not use `--flag` syntax.
 - `--no-verify`: skip tests, lint, and format checks even if they exist
 - `--pull`: run `git pull` before reviewing changes; attempt conflict resolution
 - `--push`: push to the current branch after commit
+
+## Important Rules
+
+- **ALWAYS** identify the repo convention and follow it over defaults.
+- **ALWAYS** open the matching reference and follow its rules before composing the message.
+- **ALWAYS** run verify steps if they exist, unless the user requests `--no-verify`.
+- **ALWAYS** summarize state and propose options when you need user input.
+- **NEVER** invent new commit types or emoji codes.
+- **NEVER** stage secrets or large generated artifacts unless explicitly requested.
+- **NEVER** push unless the user explicitly requests a push (via `--push` or natural language).
+- **NEVER** compose a commit message without checking the matching reference.
 
 ## References
 

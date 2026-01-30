@@ -41,7 +41,8 @@ Use only allowed types. Prefer the repo's explicit or historical type set over t
 
 ## Body and trailers
 
-- Use a body for non-trivial changes; wrap at 72 chars
+- Use a body for non-trivial changes; wrap lines at 72 chars
+- Leave one blank line between subject and body (required for git tooling)
 - Use trailers when relevant: `Fixes #123`, `Refs #123`
 
 ## Breaking changes

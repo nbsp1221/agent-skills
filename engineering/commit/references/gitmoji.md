@@ -4,7 +4,8 @@ Use this when the repo clearly follows gitmoji commits or explicitly requires gi
 
 ## Format
 
-`emoji (scope): subject`
+`emoji subject` (no scope)
+`emoji (scope): subject` (scope used)
 
 - emoji: required, from the allowed list
 - scope: optional unless the repo commonly includes it
