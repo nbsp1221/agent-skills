@@ -45,11 +45,23 @@ Use the reference docs for detailed rules.
    - Use a body and trailers when needed (blank line before body, wrap at 72 chars).
 
 7. Commit, inspect, and push
-   - `git commit -m "subject"` (use a heredoc for a body).
+   - ALWAYS run the commit through the guard script (do not use `git commit` directly):
+     - `python scripts/commit-guard.py --convention <conventional|gitmoji|custom> --message "subject"`
+     - `python scripts/commit-guard.py --convention <conventional|gitmoji|custom> --file <path>`
    - `git log -1 --format="%h %s"`
    - `git show --stat`
    - If `--push` is set, push to the current branch after commit.
    - If push fails, pause and ask using the user input guidance below.
+
+## Commit guard script
+
+Use the guard script to validate and create commits.
+Run `python scripts/commit-guard.py --help` for full usage.
+
+- `--convention` (required): `conventional`, `gitmoji`, or `custom`
+- `--message` (required unless `--file`): commit message string
+- `--file` (required unless `--message`): path to commit message file
+- `--dry-run` (optional): validate only; do not run git commit
 
 ## User input guidance
 
@@ -74,9 +86,11 @@ Honor the user's explicit request even if it does not use `--flag` syntax.
 - **ALWAYS** identify the repo convention and follow it over defaults.
 - **ALWAYS** open the matching reference and follow its rules before composing the message.
 - **ALWAYS** run verify steps if they exist, unless the user requests `--no-verify`.
+- **ALWAYS** use `scripts/commit-guard.py` to create commits.
 - **ALWAYS** summarize state and propose options when you need user input.
 - **NEVER** invent new commit types or emoji codes.
 - **NEVER** stage secrets or large generated artifacts unless explicitly requested.
+- **NEVER** run `git commit` directly.
 - **NEVER** push unless the user explicitly requests a push (via `--push` or natural language).
 - **NEVER** compose a commit message without checking the matching reference.
 

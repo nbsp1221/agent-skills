@@ -104,7 +104,7 @@ If uncertain, prefer the unicode emoji (e.g., 🎨) over the shortcode (e.g., `:
 
 ## Scope rules
 
-- Use kebab-case: `auth-flow`, `api-client`
+- Use kebab-case: `auth-flow`, `api-client` (allow slash-separated scopes if used in repo history, e.g., `engineering/commit`)
 - Only use scopes that appear in repo history or docs
 
 ## Body and trailers

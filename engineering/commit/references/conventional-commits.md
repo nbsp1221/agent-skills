@@ -36,7 +36,7 @@ Use only allowed types. Prefer the repo's explicit or historical type set over t
 
 ## Scope rules
 
-- Use kebab-case: `auth-flow`, `api-client`
+- Use kebab-case: `auth-flow`, `api-client` (allow slash-separated scopes if used in repo history, e.g., `engineering/commit`)
 - Only use scopes that appear in repo history or docs
 
 ## Body and trailers
