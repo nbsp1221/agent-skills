@@ -32,12 +32,28 @@ Detect the repo's commit convention (Conventional Commits, Gitmoji, or a custom 
 
 Location: `engineering/commit`
 
+### docker-compose
+
+Write and review Docker Compose files with consistent best practices and conventions (naming, overrides, ordering, env handling, readiness).
+
+**Use when:**
+- You want a Compose file written or standardized to team conventions
+- You need consistent key ordering and file naming
+- You want best-practice guidance for profiles, secrets/configs, and overrides
+
+**Example usage:**
+- "Create a compose.yaml for a Node + Postgres stack"
+- "Standardize this docker-compose.yml to our conventions"
+- "Review this compose file for best practices"
+
+Location: `engineering/docker-compose`
+
 ## Skill Structure
 
 Each skill is a folder that includes:
 
 - `SKILL.md` for instructions and workflow
-- `references/` for detailed rules and documentation
+- Optional `references/` for detailed rules and documentation
 
 ## References
 
