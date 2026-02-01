@@ -1,59 +1,48 @@
-# 🧠 Agent Skills
+# Agent Skills
 
-Personal collection of Agent Skills and instructions for AI agents.
+A curated collection of Agent Skills for coding agents. Each skill is a self-contained folder with a `SKILL.md` file and optional references or scripts.
 
-Skills are folders of instructions, scripts, and references that agents can load to perform tasks more accurately. This repo follows the [Agent Skills](https://agentskills.io/) format.
-
-## Installation
-
-Install a skill by pointing your agent's installer at the repo path.
+## Quick Install
 
 ```bash
-$skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/engineering/commit
+# Using the skills CLI
+npx skills add https://github.com/nbsp1221/agent-skills/tree/main/skills/commit
+
+# Using the skill-installer
+$skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/skills/commit
 ```
 
-After installing, restart your agent to pick up new skills.
+> To install another skill, replace the last path segment with the desired skill folder name.
 
-## Available Skills
+## Skills by Category
 
-### commit
+### Engineering
 
-Detect the repo's commit convention (Conventional Commits, Gitmoji, or a custom template) and create commits.
+#### commit
+- **Description:** Detects the repo's commit convention (Conventional Commits, Gitmoji, or custom) and creates commits accordingly.
+- **Use when:** "Commit these changes with the repo's convention"
+- **Location:** `skills/commit`
 
-**Use when:**
-- You want to commit changes with the repo's existing convention
-- You want a commit message generated from current changes
-- You want to commit and push with the right format
+#### docker-compose
+- **Description:** Writes/reviews Docker Compose files with consistent conventions (naming, ordering, env handling, readiness).
+- **Use when:** "Standardize this docker-compose.yml to our conventions"
+- **Location:** `skills/docker-compose`
 
-**Example usage:**
-- "Commit these changes with the repo's convention"
-- "Generate a commit message for this diff"
-- "Commit and push"
+## Structure Guidelines
 
-Location: `engineering/commit`
+- Every skill lives at `skills/<skill-name>`.
+- Each skill includes at least `SKILL.md`.
+- Optional folders: `references/`, `scripts/`, `assets/`.
+- Skill names must be unique; a flat `skills/` layout makes collisions immediately obvious.
 
-### docker-compose
-
-Write and review Docker Compose files with consistent best practices and conventions (naming, overrides, ordering, env handling, readiness).
-
-**Use when:**
-- You want a Compose file written or standardized to team conventions
-- You need consistent key ordering and file naming
-- You want best-practice guidance for profiles, secrets/configs, and overrides
-
-**Example usage:**
-- "Create a compose.yaml for a Node + Postgres stack"
-- "Standardize this docker-compose.yml to our conventions"
-- "Review this compose file for best practices"
-
-Location: `engineering/docker-compose`
-
-## Skill Structure
-
-Each skill is a folder that includes:
-
-- `SKILL.md` for instructions and workflow
-- Optional `references/` for detailed rules and documentation
+```
+skills/
+  <skill-name>/
+    SKILL.md
+    references/ (optional)
+    scripts/ (optional)
+    assets/ (optional)
+```
 
 ## References
 
