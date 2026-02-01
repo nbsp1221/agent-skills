@@ -46,8 +46,13 @@ Use the reference docs for detailed rules.
 
 7. Commit, inspect, and push
    - ALWAYS run the commit through the guard script (do not use `git commit` directly):
-     - `python scripts/commit-guard.py --convention <conventional|gitmoji|custom> --message "subject"`
-     - `python scripts/commit-guard.py --convention <conventional|gitmoji|custom> --file <path>`
+     - Resolve `{baseDir}` (the installed skill root) before running:
+       - Check project-scoped installs first: `./.claude/skills/commit`, `./.codex/skills/commit`, `./.opencode/skills/commit`
+       - Then check user-scoped installs: `~/.claude/skills/commit`, `~/.codex/skills/commit`, `~/.opencode/skills/commit`
+     - Use `{baseDir}/scripts/commit-guard.py`:
+       - `python {baseDir}/scripts/commit-guard.py --convention <conventional|gitmoji|custom> --message "subject"`
+       - `python {baseDir}/scripts/commit-guard.py --convention <conventional|gitmoji|custom> --file <path>`
+     - If `{baseDir}` cannot be found, pause and ask the user for the exact skill install path.
    - `git log -1 --format="%h %s"`
    - `git show --stat`
    - If `--push` is set, push to the current branch after commit.
@@ -56,7 +61,7 @@ Use the reference docs for detailed rules.
 ## Commit guard script
 
 Use the guard script to validate and create commits.
-Run `python scripts/commit-guard.py --help` for full usage.
+Run `python {baseDir}/scripts/commit-guard.py --help` for full usage (after resolving `{baseDir}`).
 
 - `--convention` (required): `conventional`, `gitmoji`, or `custom`
 - `--message` (required unless `--file`): commit message string
