@@ -28,6 +28,7 @@ Opinionated conventions for consistent, maintainable Docker Compose files.
 - Use `.env` for interpolation, `env_file` for container runtime values.
 - Keep secrets out of Compose files; commit `.env.example` only.
 - Prefer mapping style for `environment` when values include special chars.
+- If the same variable is set in both, `environment` overrides `env_file` (key order does not change behavior).
 
 ### Ports, volumes, and paths
 
@@ -84,7 +85,7 @@ Use this exact order for keys within each service to keep the file consistent.
 
 1. Identity: `image` / `build`, `container_name`, `hostname`
 2. Runtime: `command`, `entrypoint`, `restart`
-3. Environment: `environment`, `env_file`, `labels`
+3. Environment: `env_file`, `environment`, `labels`
 4. Resources: `ports`, `expose`, `volumes`
 5. Connectivity: `depends_on`, `networks`, `network_mode`
 6. Health: `healthcheck`
