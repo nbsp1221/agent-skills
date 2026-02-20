@@ -53,5 +53,13 @@ skills/
 
 ## References
 
+### Specification
+
 - [Agent Skills specification](https://agentskills.io/specification)
-- [Agent Skills examples](https://github.com/anthropics/skills)
+
+### Community Skill Repos
+
+- [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)
+- [marketingskills](https://github.com/coreyhaines31/marketingskills)
+- [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)
+- [superpowers](https://github.com/obra/superpowers)
