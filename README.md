@@ -28,6 +28,13 @@ $skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/skil
 - **Use when:** "Standardize this docker-compose.yml to our conventions"
 - **Location:** `skills/docker-compose`
 
+### Product & Validation
+
+#### idea-validation-autopilot
+- **Description:** Runs autonomous idea validation from raw concept to evidence-backed decision memo and MVP scope.
+- **Use when:** "I have an idea, research the market/competitors, tell me what MVP to build, and decide go/no-go with minimal questions"
+- **Location:** `skills/idea-validation-autopilot`
+
 ## Structure Guidelines
 
 - Every skill lives at `skills/<skill-name>`.
