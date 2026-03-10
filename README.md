@@ -28,6 +28,11 @@ $skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/skil
 - **Use when:** "Standardize this docker-compose.yml to our conventions"
 - **Location:** `skills/docker-compose`
 
+#### code-simplifier
+- **Description:** Runs a behavior-preserving simplification pass that makes recently changed code easier to read, reason about, and modify safely.
+- **Use when:** "Simplify this messy diff without changing behavior so the next edit is easier"
+- **Location:** `skills/code-simplifier`
+
 ### Product & Validation
 
 #### idea-validation-autopilot

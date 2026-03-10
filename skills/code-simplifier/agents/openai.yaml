@@ -1,0 +1,3 @@
+interface:
+  display_name: "Code Simplifier"
+  short_description: "Recover readability and future editability without changing behavior"
