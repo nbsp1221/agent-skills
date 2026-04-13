@@ -33,6 +33,11 @@ $skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/skil
 - **Use when:** "Simplify this messy diff without changing behavior so the next edit is easier"
 - **Location:** `skills/code-simplifier`
 
+#### subagent-orchestration
+- **Description:** Orchestrates subagents for coding work with bounded delegation, safe review fan-out, and host-aware limits instead of reflexive parallelism.
+- **Use when:** "Split exploration or review across subagents, but keep one writer and strong synthesis"
+- **Location:** `skills/subagent-orchestration`
+
 ### Product & Validation
 
 #### idea-validation-autopilot
