@@ -38,6 +38,11 @@ $skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/skil
 - **Use when:** "Split exploration or review across subagents, but keep one writer and strong synthesis"
 - **Location:** `skills/subagent-orchestration`
 
+#### remote-repository-research
+- **Description:** Investigates a repository that is not already local by cloning it to a temporary location, inspecting the actual contents first, and using external material only as supporting evidence.
+- **Use when:** "Research this remote repo and tell me which files matter, how it is structured, and what patterns it uses"
+- **Location:** `skills/remote-repository-research`
+
 ### Product & Validation
 
 #### idea-validation-autopilot
