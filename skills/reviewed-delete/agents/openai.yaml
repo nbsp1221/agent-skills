@@ -1,0 +1,7 @@
+interface:
+  display_name: "Reviewed Delete"
+  short_description: "Review, stage, restore, and purge exact paths"
+  default_prompt: "Use $reviewed-delete after we have decided the exact paths to delete."
+
+policy:
+  allow_implicit_invocation: false
