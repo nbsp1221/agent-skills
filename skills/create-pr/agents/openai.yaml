@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create PR"
+  short_description: "Safely publish a review-ready GitHub pull request"
+  default_prompt: "Use $create-pr to validate this task branch and create the authorized GitHub pull request."

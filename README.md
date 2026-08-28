@@ -23,6 +23,11 @@ $skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/skil
 - **Use when:** "Commit these changes with the repo's convention"
 - **Location:** `skills/commit`
 
+#### create-pr
+- **Description:** Validates a completed task branch and safely creates one review-ready GitHub pull request after explicit authorization.
+- **Use when:** "Create the pull request for this completed branch"
+- **Location:** `skills/create-pr`
+
 #### docker-compose
 - **Description:** Writes/reviews Docker Compose files with consistent conventions (naming, ordering, env handling, readiness).
 - **Use when:** "Standardize this docker-compose.yml to our conventions"
@@ -54,13 +59,14 @@ $skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/skil
 
 - Every skill lives at `skills/<skill-name>`.
 - Each skill includes at least `SKILL.md`.
-- Optional folders: `references/`, `scripts/`, `assets/`.
+- Optional folders: `agents/`, `references/`, `scripts/`, `assets/`.
 - Skill names must be unique; a flat `skills/` layout makes collisions immediately obvious.
 
 ```
 skills/
   <skill-name>/
     SKILL.md
+    agents/ (optional)
     references/ (optional)
     scripts/ (optional)
     assets/ (optional)
