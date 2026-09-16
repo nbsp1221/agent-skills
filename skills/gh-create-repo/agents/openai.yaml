@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create GitHub Repository"
+  short_description: "Research and create well-positioned GitHub repositories"
+  default_prompt: "Use $gh-create-repo to research my repository conventions and propose metadata before creating a GitHub repository."

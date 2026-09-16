@@ -28,6 +28,11 @@ $skill-installer install https://github.com/nbsp1221/agent-skills/tree/main/skil
 - **Use when:** "Create the pull request for this completed branch"
 - **Location:** `skills/create-pr`
 
+#### gh-create-repo
+- **Description:** Researches naming, visibility, descriptions, and topics before safely creating a GitHub repository after explicit approval.
+- **Use when:** "Research my GitHub conventions and propose a new repository before creating it"
+- **Location:** `skills/gh-create-repo`
+
 #### docker-compose
 - **Description:** Writes/reviews Docker Compose files with consistent conventions (naming, ordering, env handling, readiness).
 - **Use when:** "Standardize this docker-compose.yml to our conventions"
