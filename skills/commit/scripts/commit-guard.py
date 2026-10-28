@@ -254,16 +254,9 @@ def validate_custom(message):
 
 
 def run_git_commit(message):
-    git_dir = Path(".git")
-    if not git_dir.is_dir():
-        raise RuntimeError("Not a git repository (missing .git).")
-
-    if "\n" in message:
-        tmp_path = git_dir / "COMMIT_EDITMSG"
-        tmp_path.write_text(message, encoding="utf-8")
-        subprocess.run(["git", "commit", "-F", str(tmp_path)], check=True)
-        return
-    subprocess.run(["git", "commit", "-m", message], check=True)
+    subprocess.run(
+        ["git", "commit", "-F", "-"], input=message.encode("utf-8"), check=True
+    )
 
 
 def main():
@@ -304,9 +297,6 @@ def main():
     if not args.dry_run:
         try:
             run_git_commit(message)
-        except RuntimeError as exc:
-            print(str(exc), file=sys.stderr)
-            return 2
         except subprocess.CalledProcessError as exc:
             return exc.returncode
 
